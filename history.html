@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>i1Win</title>
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700,800,900" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet"/>
+    <link rel="icon" type="image/png" href="images/favicon.png"/>
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/all.css"/>
+  </head>
+  <body>
+    <!-- loading icon start -->
+    <div class="spinner-wrapper">
+      <div class="spinner-container">
+        <div class="spinner"></div>
+        <div class="spinner"></div>
+        <div class="spinner"></div>
+      </div>
+      <div class="spinner-backdrop"></div>
+    </div>
+    <!-- loading icon end -->
+    <div class="wrapper">
+      <!-- header -->
+      <header class="header">
+        <div class="topbar">
+          <div class="container">
+            <div class="topbar-left">
+              <div class="header-logo">
+                <h1><a href="index.html">i1Win</a></h1>
+              </div>
+            </div>
+            <div class="topbar-right"><span class="current-time">09/01/2019 14:26:04 (GMT+8)</span>
+              <div class="lang-select"><a class="current-lang" href="javascript:void(0)"><img src="images/lang_en.svg" alt="En"/></a>
+                <ul class="lang-list">
+                  <li><a href="javascript:void(0)" data-value="En"><img src="images/lang_en.svg" alt="En" data-value="En"/><span data-value="En">En</span></a></li>
+                  <li><a href="javascript:void(0)" data-value="Th"><img src="images/lang_th.svg" alt="Th" data-value="Th"/><span data-value="Th">Th</span></a></li>
+                </ul>
+              </div>
+              <div class="header-wallet">
+                <!-- 會員中心 -->
+                <div class="wallet-user"><img class="wallet-user-icon" src="images/header_user.svg" alt=""/><span class="wallet-text wallet-user-name">accountid</span>
+                  <ul class="user-setting-menu">
+                    <li><a href="profile.html">Edit Profile </a></li>
+                    <li><a href="change-password.html">Change Password</a></li>
+                  </ul>
+                </div>
+                <!-- 餘額 -->
+                <div class="wallet-balance"><img class="wallet-icon" src="images/header_balance.svg" alt=""/><img class="wallet-icon hover" src="images/header_balance_hover.svg" alt=""/>
+                  <div class="wallet-balance-text"><span>Balance</span><span class="balance-currency">THB</span><span class="wallet-text">3020.12</span></div>
+                  <table class="wallet-balance-table">
+                    <thead>
+                      <tr>
+                        <th>Main Wallet</th>
+                        <th>1257.22</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>SBOBET</td>
+                        <td>101.22</td>
+                      </tr>
+                      <tr>
+                        <td>iBCbet</td>
+                        <td class="active">0.00</td>
+                      </tr>
+                      <tr>
+                        <td>Playtech</td>
+                        <td class="active">0.00</td>
+                      </tr>
+                      <tr>
+                        <td>Asia Gaming</td>
+                        <td>101.22</td>
+                      </tr>
+                      <tr>
+                        <td>Microgaming</td>
+                        <td>101.22</td>
+                      </tr>
+                      <tr>
+                        <td>GPI</td>
+                        <td>101.22</td>
+                      </tr>
+                      <tr>
+                        <td>Evolution Gaming</td>
+                        <td class="active">0.00</td>
+                      </tr>
+                      <tr>
+                        <td>SA Gaming</td>
+                        <td>101.22</td>
+                      </tr>
+                      <tr>
+                        <td>YGGDRASIL</td>
+                        <td class="active">0.00</td>
+                      </tr>
+                      <tr>
+                        <td>Spadegaming</td>
+                        <td>101.22</td>
+                      </tr>
+                      <tr>
+                        <td>918Kiss</td>
+                        <td>101.22</td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td>Total</td>
+                        <td>2329.37</td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+                <!-- 錢包 -->
+                <div class="wallet-setting"><a href="javascript:void(0)"> <img class="wallet-icon" src="images/header_wallet.svg" alt=""/><img class="wallet-icon hover" src="images/header_wallet_hover.svg" alt=""/><span class="wallet-text">Wallet</span></a>
+                  <ul class="wallet-setting-menu">
+                    <li><a href="deposit.html">Deposit</a></li>
+                    <li><a href="withdrawal.html">Withdrawal</a></li>
+                    <li><a href="transfer.html">Transfer</a></li>
+                    <li><a href="history.html">History</a></li>
+                  </ul>
+                </div>
+                <!-- 登出 --><a class="logout-btn" href="index.html">Log out</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- navbar -->
+        <nav class="navbar">
+          <div class="container">
+            <ul class="navbar-list">
+              <li><a href="index.html"><img class="orig-img" src="images/nav_home.svg" alt=""/><img class="hover-img" src="images/nav_home_hover.svg" alt=""/><span>Home</span></a>
+              </li>
+              <li><a href="sports.html"><img class="orig-img" src="images/nav_sports.svg" alt=""/><img class="hover-img" src="images/nav_sports_hover.svg" alt=""/><span>Sports</span></a>
+                <div class="sub-navbar-wrapper">
+                  <ul class="sub-navbar-list container">
+                    <li><a href="javascript:void(0)">
+                        <picture class="subnav-img">
+                          <source srcset="images/nav_sports_sub01_ibcbet.webp" type="image/webp"/><img src="images/nav_sports_sub01_ibcbet.png" alt=""/>
+                        </picture><span>IBCBET</span></a></li>
+                    <li><a href="javascript:void(0)">
+                        <picture class="subnav-img">
+                          <source srcset="images/nav_sports_sub02_sbobet.webp" type="image/webp"/><img src="images/nav_sports_sub02_sbobet.png" alt=""/>
+                        </picture><span>SBOBET</span></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="live-casino.html"><img class="orig-img" src="images/nav_casino.svg" alt=""/><img class="hover-img" src="images/nav_casino_hover.svg" alt=""/><span>Live Casino</span></a>
+                <div class="sub-navbar-wrapper">
+                  <ul class="sub-navbar-list container">
+                    <li><a href="javascript:void(0)">
+                        <picture class="subnav-img">
+                          <source srcset="images/nav_casino_sub01_pt.webp" type="image/webp"/><img src="images/nav_casino_sub01_pt.png" alt=""/>
+                        </picture><span>PT Casino</span></a></li>
+                    <li><a href="javascript:void(0)">
+                        <picture class="subnav-img">
+                          <source srcset="images/nav_casino_sub02_AG.webp" type="image/webp"/><img src="images/nav_casino_sub02_AG.png" alt=""/>
+                        </picture><span>AG Casino</span></a></li>
+                    <li><a href="javascript:void(0)">
+                        <picture class="subnav-img">
+                          <source srcset="images/nav_casino_sub03_dg.webp" type="image/webp"/><img src="images/nav_casino_sub03_dg.png" alt=""/>
+                        </picture><span>DG Casino</span></a></li>
+                    <li><a href="javascript:void(0)">
+                        <picture class="subnav-img">
+                          <source srcset="images/nav_casino_sub04_GPI.webp" type="image/webp"/><img src="images/nav_casino_sub04_GPI.png" alt=""/>
+                        </picture><span>GPI Casino</span></a></li>
+                    <li><a href="javascript:void(0)">
+                        <picture class="subnav-img">
+                          <source srcset="images/nav_casino_sub05_evo.webp" type="image/webp"/><img src="images/nav_casino_sub05_evo.png" alt=""/>
+                        </picture><span>Evo Casino</span></a></li>
+                    <li><a href="javascript:void(0)">
+                        <picture class="subnav-img">
+                          <source srcset="images/nav_casino_sub06_sa.webp" type="image/webp"/><img src="images/nav_casino_sub06_sa.png" alt=""/>
+                        </picture><span>SA Casino</span></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="slots.html"><img class="orig-img" src="images/nav_slots.svg" alt=""/><img class="hover-img" src="images/nav_slots_hover.svg" alt=""/><span>Slots</span></a>
+                <div class="sub-navbar-wrapper">
+                  <ul class="sub-navbar-list justify-content-start container">
+                    <li><a href="javascript:void(0)">
+                        <picture class="subnav-img">
+                          <source srcset="images/nav_slots_sub01_pt.webp" type="image/webp"/><img src="images/nav_slots_sub01_pt.png" alt=""/>
+                        </picture><span>Playtech</span></a></li>
+                    <li><a href="javascript:void(0)">
+                        <picture class="subnav-img">
+                          <source srcset="images/nav_slots_sub02_booongo.webp" type="image/webp"/><img src="images/nav_slots_sub02_booongo.png" alt=""/>
+                        </picture><span>Booongo</span></a></li>
+                    <li><a href="javascript:void(0)">
+                        <picture class="subnav-img">
+                          <source srcset="images/nav_slots_sub03_ifun.webp" type="image/webp"/><img src="images/nav_slots_sub03_ifun.png" alt=""/>
+                        </picture><span>ifun GAME</span></a></li>
+                    <li><a href="javascript:void(0)">
+                        <picture class="subnav-img">
+                          <source srcset="images/nav_slots_sub04_ygg.webp" type="image/webp"/><img src="images/nav_slots_sub04_ygg.png" alt=""/>
+                        </picture><span>YGGDRASIL</span></a></li>
+                    <li><a href="javascript:void(0)">
+                        <picture class="subnav-img">
+                          <source srcset="images/nav_slots_sub05_spg.webp" type="image/webp"/><img src="images/nav_slots_sub05_spg.png" alt=""/>
+                        </picture><span>Spadegaming</span></a></li>
+                    <li><a href="javascript:void(0)">
+                        <picture class="subnav-img">
+                          <source srcset="images/nav_slots_sub_gpi.webp" type="image/webp"/><img src="images/nav_slots_sub_gpi.png" alt=""/>
+                        </picture><span>GAMEPLAY</span></a></li>
+                    <li><a href="javascript:void(0)">
+                        <picture class="subnav-img">
+                          <source srcset="images/nav_slots_sub07_joker.webp" type="image/webp"/><img src="images/nav_slots_sub07_joker.png" alt=""/>
+                        </picture><span>JOKER</span></a></li>
+                    <li><a href="javascript:void(0)">
+                        <picture class="subnav-img">
+                          <source srcset="images/nav_slots_sub06_918kiss.webp" type="image/webp"/><img src="images/nav_slots_sub06_918kiss.png" alt=""/>
+                        </picture><span>918Kiss</span></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="lottery.html"><img class="orig-img" src="images/nav_lottery.svg" alt=""/><img class="hover-img" src="images/nav_lottery_hover.svg" alt=""/><span>Lottery</span></a>
+                <div class="sub-navbar-wrapper">
+                  <ul class="sub-navbar-list container">
+                    <li><a href="javascript:void(0)">
+                        <picture class="subnav-img">
+                          <source srcset="images/nav_lottery_sub_thai.webp" type="image/webp"/><img src="images/nav_lottery_sub_thai.png" alt=""/>
+                        </picture><span>THAI LOTTERY</span></a></li>
+                    <li><a href="javascript:void(0)">
+                        <picture class="subnav-img">
+                          <source srcset="images/nav_lottery_sub_diamond.webp" type="image/webp"/><img src="images/nav_lottery_sub_diamond.png" alt=""/>
+                        </picture><span>Diamond</span></a></li>
+                    <li><a href="javascript:void(0)">
+                        <picture class="subnav-img">
+                          <source srcset="images/nav_lottery_sub_ruby.webp" type="image/webp"/><img src="images/nav_lottery_sub_ruby.png" alt=""/>
+                        </picture><span>Ruby</span></a></li>
+                    <li><a href="javascript:void(0)">
+                        <picture class="subnav-img">
+                          <source srcset="images/nav_lottery_sub_sapphire.webp" type="image/webp"/><img src="images/nav_lottery_sub_sapphire.png" alt=""/>
+                        </picture><span>Sapphire</span></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="fishing.html"><img class="orig-img" src="images/nav_fishing.svg" alt=""/><img class="hover-img" src="images/nav_fishing_hover.svg" alt=""/><span>Fishing</span></a>
+                <div class="sub-navbar-wrapper">
+                  <ul class="sub-navbar-list container">
+                    <li><a href="javascript:void(0)">
+                        <picture class="subnav-img">
+                          <source srcset="images/nav_fishing_sub01_cash.webp" type="image/webp"/><img src="images/nav_fishing_sub01_cash.png" alt=""/>
+                        </picture><span>Cash Fish</span></a></li>
+                    <li><a href="javascript:void(0)">
+                        <picture class="subnav-img">
+                          <source srcset="images/nav_fishing_sub02_fishinggod.webp" type="image/webp"/><img src="images/nav_fishing_sub02_fishinggod.png" alt=""/>
+                        </picture><span>Fishing God</span></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="promotion.html"><img class="orig-img" src="images/nav_promotion.svg" alt=""/><img class="hover-img" src="images/nav_promotion_hover.svg" alt=""/><span>Promotions</span></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- content -->
+      <div class="member-wrapper">
+        <div class="container">
+          <!-- 錢包 -->
+          <div class="wallet-board">
+            <div class="wallet-header">
+              <div class="wallet-header-title"><span>Your Wallet</span><a class="refresh-icon" href="javascript:void(0)"><img src="images/member_update.svg" alt=""/></a></div>
+              <div class="wallet-header-title"><span>Main Wallet</span><span>THB 1257.22</span></div>
+              <div class="wallet-header-title"><span>Total</span><span>THB 2257.27</span></div>
+            </div>
+            <ul class="wallet-list">
+              <li>
+                <h4 class="wallet-name">SBObet</h4><span class="wallet-currency">THB</span><span class="wallet-amount">101.22</span>
+              </li>
+              <li>
+                <h4 class="wallet-name">IBCbet</h4><span class="wallet-currency">THB</span><span class="wallet-amount active">0.00</span>
+              </li>
+              <li>
+                <h4 class="wallet-name">Playtech</h4><span class="wallet-currency">THB</span><span class="wallet-amount active">0.00</span>
+              </li>
+              <li>
+                <h4 class="wallet-name">Asia Gaming</h4><span class="wallet-currency">THB</span><span class="wallet-amount">20.00</span>
+              </li>
+              <li>
+                <h4 class="wallet-name">Microgaming</h4><span class="wallet-currency">THB</span><span class="wallet-amount active">0.00</span>
+              </li>
+              <li>
+                <h4 class="wallet-name">GamePlay Interactive</h4><span class="wallet-currency">THB</span><span class="wallet-amount active">0.00</span>
+              </li>
+              <li>
+                <h4 class="wallet-name">Evolution Gaming</h4><span class="wallet-currency">THB</span><span class="wallet-amount">360.00</span>
+              </li>
+              <li>
+                <h4 class="wallet-name">SA Gaming</h4><span class="wallet-currency">THB</span><span class="wallet-amount active">0.00</span>
+              </li>
+              <!-- 2 -->
+              <li>
+                <h4 class="wallet-name">YGGDRASIL</h4><span class="wallet-currency">THB</span><span class="wallet-amount active">0.00</span>
+              </li>
+              <li>
+                <h4 class="wallet-name">Spadegaming</h4><span class="wallet-currency">THB</span><span class="wallet-amount">500.02</span>
+              </li>
+              <li>
+                <h4 class="wallet-name">918Kiss</h4><span class="wallet-currency">THB</span><span class="wallet-amount active">0.00</span>
+              </li>
+              <li>
+                <h4 class="wallet-name">Joker</h4><span class="wallet-currency">THB</span><span class="wallet-amount active">0.00</span>
+              </li>
+              <li>
+                <h4 class="wallet-name">Keno</h4><span class="wallet-currency">THB</span><span class="wallet-amount">200.05</span>
+              </li>
+              <li>
+                <h4 class="wallet-name">W Keno</h4><span class="wallet-currency">THB</span><span class="wallet-amount">1200.56</span>
+              </li>
+              <li>
+                <h4 class="wallet-name">Super Lotto</h4><span class="wallet-currency">THB</span><span class="wallet-amount active">0.00</span>
+              </li>
+              <li>
+                <h4 class="wallet-name">SYLOTTERY</h4><span class="wallet-currency">THB</span><span class="wallet-amount active">0.00</span>
+              </li>
+              <li>
+                <h4 class="wallet-name">SYLOTTERY</h4><span class="wallet-currency">THB</span><span class="wallet-amount active">0.00</span>
+              </li>
+            </ul>
+          </div>
+          <!-- 錢包下方區塊 -->
+          <main class="member-main">
+            <!-- 會員中心選單 -->
+            <ul class="member-menu">
+              <li><a href="profile.html"><img class="menu-icon" src="images/member_edit_profile.svg" alt=""/><span>Edit Profile</span></a></li>
+              <li><a href="change-password.html"><img class="menu-icon" src="images/member_change_password.svg" alt=""/><span>Change Password</span></a></li>
+              <li><a href="deposit.html"><img class="menu-icon" src="images/member_deposit.svg" alt=""/><span>Deposit</span></a></li>
+              <li><a href="withdrawal.html"><img class="menu-icon" src="images/member_withdrawal.svg" alt=""/><span>Withdrawal</span></a></li>
+              <li><a href="transfer.html"><img class="menu-icon" src="images/member_transfer.svg" alt=""/><span>Transfer</span></a></li>
+              <li><a class="active" href="history.html"><img class="menu-icon" src="images/member_history.svg" alt=""/><span>History</span></a></li>
+            </ul>
+            <!-- 會員中心主內容 start -->
+            <div class="member-content">
+              <h2>History</h2>
+              <div class="history-header">
+                <div class="form-group">
+                  <label for="">Type:</label>
+                  <select id="historySelect" name="">
+                    <option value="Statement" selected="">Statement</option>
+                    <option value="Transfer">Transfer</option>
+                    <option value="Transaction">Transaction</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="">Date:</label>
+                  <input class="currentDate form-date" type="date" name="" id=""/>
+                  <input class="currentDate" type="date" name="" id=""/>
+                  <button class="search-btn">Search</button>
+                </div>
+              </div>
+              <!-- 歷史紀錄表格 start  -->
+              <div class="history-table">
+                <table>
+                  <thead class="table-title"></thead>
+                  <tbody class="table-content"></tbody>
+                </table>
+              </div>
+              <nav class="pagination"></nav>
+            </div>
+            <!-- 右邊主內容 end -->
+          </main>
+        </div>
+      </div>
+      <!-- Download -->
+      <aside class="aside-left">
+        <div class="aside-left-wrapper" data-toggle="modal" data-target="#downloadPcModal"><img src="images/aside_download.png" alt="Download"/></div>
+      </aside>
+      <!-- Party-->
+      <aside class="aside-event">
+        <div class="aside-event-wrapper">
+          <button class="aside-event-close"><img src="images/aside_party_close.svg" alt=""/></button><a class="aside-event-content" href="#"><img src="images/aside_party_bng.png" alt=""/></a>
+        </div>
+      </aside>
+      <!-- QRcode -->
+      <aside class="aside-right">
+        <div class="aside-right-wrapper"><img src="images/aside_line.svg" alt=""/>
+          <div class="aside-right-close"><img src="images/aside_close.svg" alt=""/></div>
+          <div class="aside-right-content"><img src="images/aside_code.jpg" alt=""/></div>
+        </div>
+      </aside>
+      <!-- footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-row">
+            <div class="footer-col">
+              <h4>About i1Win</h4>
+              <div class="about-content">
+                <p>i1Win was founded with a simple mission - to be the best online casino in Thailand breathing new life & fun into world of virtual casino entertainment. </p>
+                <p>Bringing you the best games from world class providers and a high level of trustand unmatched service, you will enjoy a casino experience like no other.</p>
+              </div>
+            </div>
+            <div class="footer-col">
+              <h4>World of i1Win</h4>
+              <div class="footer-col-box">
+                <h5>i1Win</h5>
+                <ul class="link-list">
+                  <li><a href="javascript:void(0)">About</a></li>
+                  <li><a href="javascript:void(0)">Banking</a></li>
+                  <li><a href="javascript:void(0)">Promotions</a></li>
+                  <li><a href="javascript:void(0)">Support</a></li>
+                </ul>
+              </div>
+              <div class="footer-col-box">
+                <h5>Info Centre</h5>
+                <ul class="link-list">
+                  <li><a href="responsible-gaming.html">Responsible Gaming</a></li>
+                  <li><a href="javascript:void(0)">Terms Of Use</a></li>
+                  <li><a href="javascript:void(0)">Privacy Policy</a></li>
+                  <li><a href="javascript:void(0)">FAQ</a></li>
+                </ul>
+              </div>
+              <div class="footer-col-box">
+                <h5>Financial Channel</h5>
+                <ul class="financial-list">
+                  <li><img src="images/footer/financial_01.webp" alt=""/></li>
+                  <li><img src="images/footer/financial_02.webp" alt=""/></li>
+                  <li><img src="images/footer/financial_03.webp" alt=""/></li>
+                  <li><img src="images/footer/financial_04.webp" alt=""/></li>
+                  <li><img src="images/footer/financial_05.webp" alt=""/></li>
+                  <li><img src="images/footer/financial_06.webp" alt=""/></li>
+                  <li><img src="images/footer/financial_07.webp" alt=""/></li>
+                  <li><img src="images/footer/financial_08.webp" alt=""/></li>
+                </ul>
+              </div>
+              <div class="footer-col-box">
+                <h5>Contact Us</h5>
+                <ul class="contact-list">
+                  <li><a href="javascript:void(0)"><img src="images/footer/facebook.webp" alt="Facebook"/></a></li>
+                  <li><a href="javascript:void(0)"><img src="images/footer/instagram.webp" alt="Instagram"/></a></li>
+                  <li><a href="javascript:void(0)"><img src="images/footer/twitter.webp" alt="Twitter"/></a></li>
+                  <li><a href="javascript:void(0)"><img src="images/footer/youtube.webp" alt="YouTube"/></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <div class="footer-row footer-logo">
+              <div class="logo-list"><img src="images/footer/vendor_logo.webp" alt=""/></div>
+            </div>
+            <div class="footer-row footer-copyright">
+              <p>© 2019 i1WIN . All rights reserved for those aged 18+</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- registered modal start -->
+      <div class="member-modal modal fade" id="registeredModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close"><img src="images/icon_close_02.svg" alt=""/></button>
+              <div class="modal-header-logo"><img src="images/logo.svg" alt=""/></div>
+              <p class="modal-header-text">Complete registration process without 10 seconds</p>
+            </div>
+            <div class="modal-body">
+              <form name="registered">
+                <!-- Username-->
+                <div class="member-form-group required-input" data-container="body" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="Please enter 6 to 12 digits and English characters.">
+                  <div class="input-icon"><img src="images/icon_username.svg" alt="Username" title="Username"/></div>
+                  <input class="member-input" id="registeredUsername" type="text" name="username" placeholder="Username" minlength="6" maxlength="12" required="required"/>
+                  <div class="form-feedback">
+                    <!-- 帳號已被使用 -->
+                    <!-- <img src="images/icon_error.svg" alt="incorrect"> <span class="feedback-text">The username has already been used.</span> 
+                    -->
+                  </div>
+                </div>
+                <!-- Password-->
+                <div class="member-form-group required-input" data-container="body" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="Passwords must include lowercase, uppercase and numeric, 6 to 12 characters.">
+                  <div class="input-icon"><img src="images/icon_password.webp" alt="Password" title="Password"/></div>
+                  <div class="psw-icon" style="background-image: url(images/icon_psw_shutdown.svg);"></div>
+                  <input class="member-input" type="password" name="password" placeholder="Password" minlength="6" maxlength="12" required="required"/>
+                  <div class="form-feedback"></div>
+                </div>
+                <!-- Password-->
+                <div class="member-form-group required-input" data-container="body" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="Passwords must include lowercase, uppercase and numeric, 6 to 12 characters.">
+                  <div class="input-icon"><img src="images/icon_password.webp" alt="Verify Password" title="Verify Password"/></div>
+                  <div class="psw-icon" style="background-image: url(images/icon_psw_shutdown.svg);"></div>
+                  <input class="member-input" type="password" name="verifyPassword" placeholder="Verify Password" minlength="6" maxlength="12" required="required"/>
+                  <div class="form-feedback"></div>
+                </div>
+                <!-- Full Name-->
+                <div class="member-form-group required-input" data-container="body" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="Must match with your bank account.">
+                  <div class="input-icon"><img src="images/icon_full_name.svg" alt="Full Name" title="Full Name"/></div>
+                  <input class="member-input" type="text" name="fullName" placeholder="Full Name" required="required"/>
+                  <div class="form-feedback"></div>
+                </div>
+                <!-- Mobile Number-->
+                <div class="member-form-group required-input" data-container="body" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="Valid phone namber is required for verification purpose, e.g. 66 026292641.">
+                  <div class="input-icon"><img src="images/icon_mobile.svg" alt="Mobile Number" title="Mobile Number"/></div>
+                  <input class="member-input" type="tel" name="mobile" placeholder="Mobile Number" required="required"/>
+                  <div class="form-feedback"></div>
+                </div>
+                <!-- UID  -->
+                <div class="member-form-group" data-container="body" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="Leave blank if you don't have referral.">
+                  <div class="input-icon"><img src="images/icon_uid.svg" alt="Referral UID" title="Referral UID"/></div>
+                  <input class="member-input" type="text" name="referralUid" placeholder="Referral UID"/>
+                </div>
+                <p class="member-body-text">I am at least 18 years old and have read<br/>and accepted the Terms and Conditions.</p>
+                <button class="member-submit-btn" type="submit" name="submit" disabled="disabled">Registered</button>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <ul class="modal-footer-link">
+                <li><a href="javascript:void(0)">Need help?</a></li>
+                <li><a class="open-login-modal" href="javascript:void(0)" data-toggle="modal" data-target="#loginModal" data-dismiss="modal">Login</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- registered modal end -->
+      <!-- login modal start -->
+      <div class="member-modal modal fade" id="loginModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close"><img src="images/icon_close_02.svg" alt=""/></button>
+              <div class="modal-header-logo"><img src="images/logo.svg" alt="i1Win"/></div>
+              <p class="modal-header-text">Sign in now,Play the game and get the bonus.</p>
+            </div>
+            <div class="modal-body">
+              <form name="login">
+                <div class="member-form-group" data-container="body" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="If you have forgotten your username, you can contact customer service.">
+                  <div class="input-icon"><img src="images/icon_username.svg" alt="Username" title="Username"/></div>
+                  <input class="member-input" id="loginUsername" type="text" name="username" placeholder="Username" required="required"/>
+                  <!-- <div class="form-feedback">
+                    <img src="images/icon_error.svg" alt="incorrect">
+                    <span class="feedback-text">The username is not yet registered.</span>
+                  </div>
+                  -->
+                </div>
+                <div class="member-form-group" data-container="body" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="If you have forgotten your password, you can click the forgot password below or contact customer service directly.">
+                  <div class="input-icon"><img src="images/icon_password.webp" alt="Password" title="Password"/></div>
+                  <div class="psw-icon" style="background-image: url(images/icon_psw_shutdown.svg);"></div>
+                  <input class="member-input" type="password" name="password" placeholder="Password" minlength="6" maxlength="12" required="required"/>
+                  <!-- <div class="form-feedback">
+                    <img src="images/icon_error.svg" alt="incorrect">
+                    <span class="feedback-text">Oops, the password is entered incorrectly,<br>
+                      there are 4 chances to try.
+                    </span>
+                  </div>
+                  -->
+                </div><a class="member-forgot-psw" href="javascript:void(0)" data-toggle="modal" data-target="#forgotPasswordModal" data-dismiss="modal">Forgot Password?</a><a class="member-submit-btn" href="index-loggedin.html"> Login</a>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <ul class="modal-footer-link">
+                <li><a href="javascript:void(0)">Need help?</a></li>
+                <li><a class="open-registered-modal" href="javascript:void(0)" data-toggle="modal" data-target="#registeredModal" data-dismiss="modal">Registered</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- login modal end -->
+      <!-- forgot password modal start -->
+      <div class="member-modal modal fade" id="forgotPasswordModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close"><img src="images/icon_close_02.svg" alt=""/></button>
+              <div class="modal-header-logo"><img src="images/logo.svg" alt="i1Win"/></div>
+              <p class="modal-header-text mb-25">Don't worry, we will send you a new set of passwords<br/>as soon as you enter the relevant information.</p>
+            </div>
+            <div class="modal-body">
+              <form name="forgotPassword">
+                <div class="member-form-group" data-container="body" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="Please enter the username you are looking for. If you have forgotten, please contact online customer service.">
+                  <div class="input-icon"><img src="images/icon_username.svg" alt="Username" title="Username"/></div>
+                  <input class="member-input" id="forgotPasswordUsername" type="text" name="username" placeholder="Username" maxlength="12"/>
+                  <div class="form-feedback"></div>
+                  <!-- 帳號已被使用 -->
+                  <!-- <div class="form-feedback">
+                  <img src="images/icon_error.svg" alt="incorrect">
+                  <span class="feedback-text">The username is not yet registered.</span>
+                  </div> 
+                  -->
+                </div>
+                <div class="member-form-group" data-container="body" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="Please enter your mobile number. If you have forgotten, please contact online customer service.">
+                  <div class="input-icon"><img src="images/icon_mobile.svg" alt="Mobile Number" title="Mobile Number"/></div>
+                  <input class="member-input" type="tel" name="mobile" placeholder="Mobile Number"/>
+                  <div class="form-feedback"></div>
+                  <!-- 電話號碼與帳號無法匹配 -->
+                  <!-- <div class="form-feedback">
+                  <img src="images/icon_error.svg" alt="incorrect">
+                  <span class="feedback-text">Sorry, The given mobile number does not match with the user's mobile number.</span>
+                  </div> 
+                  -->
+                </div>
+                <button class="memeber-submit-btn mt-46" type="submit" name="submit" disabled="disabled">Submit</button>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <ul class="modal-footer-link">
+                <li><a href="javascript:void(0)">Need help?</a></li>
+                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#loginModal" data-dismiss="modal">Login</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- forgot password modal end -->
+      <!-- pc download modal start -->
+      <div class="download-modal modal fade" id="downloadPcModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close"><img src="images/icon_close_02.svg" alt=""/></button>
+            </div>
+            <div class="modal-body">
+              <h2 class="modal-title">Download Center</h2>
+              <p class="modal-text">Click Download Desktop to let you enjoy the casino game.</p>
+              <ul class="download-btn">
+                <li><a class="active" href="javascript:void(0)">PC application</a></li>
+                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#downloadMobileModal" data-dismiss="modal">Mobile application</a></li>
+              </ul>
+              <div class="download-content">
+                <ul class="download-list">
+                  <li><img class="download-logo" src="images/download_01_pt.webp" alt=""/>
+                    <div class="download-link"><a href="javascript:void(0)"><img class="download-link-img" src="images/download_pc.webp" alt=""/></a></div>
+                    <p class="download-pc-text">Playtech  Installer</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- pc download modal end -->
+      <!-- mobile download modal start -->
+      <div class="download-modal modal fade" id="downloadMobileModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close"><img src="images/icon_close_02.svg" alt=""/></button>
+            </div>
+            <div class="modal-body">
+              <h2 class="modal-title">Download Center</h2>
+              <p class="modal-text">Use a mobile web browser to scan the QR code or click on the download link to download the game.</p>
+              <ul class="download-btn">
+                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#downloadPcModal" data-dismiss="modal">PC application</a></li>
+                <li><a class="active" href="javascript:void(0)">Mobile application</a></li>
+              </ul>
+              <div class="download-content">
+                <div class="download-mobile-wrapper">
+                  <ul class="download-list download-mobile-list swiper-wrapper">
+                    <!-- playtech -->
+                    <li class="download-large-wrapper swiper-slide"><img class="download-logo" src="images/download_01_pt.webp" alt=""/>
+                      <div class="download-text">
+                        <!-- 未登入 -->
+                        <!-- <p>
+                          <span class="text-gray">Login ID:</span>
+                          <a class="text-link" href="javascript:void(0)" data-toggle="modal" data-target="#registeredModal" data-dismiss="modal">Register</a>
+                          <span class="text-gray">or</span><a class="text-link" href="javascript:void(0)" data-toggle="modal" data-target="#loginModal" data-dismiss="modal">Login</a>
+                        </p>
+                        -->
+                        <p><span class="download-text-title">Login ID:</span><span class="download-text-yellow">#</span></p>
+                        <p><span class="download-text-title">Password:</span><span class="download-text-white">Same as site login</span></p>
+                      </div>
+                      <div class="download-img-wrapper">
+                        <div class="download-img">
+                          <div class="download-icon-wrapper"><img class="download-icon" src="images/download_android.svg" alt="download_android"/><span>Live Casino</span></div><img class="download-qrcode" src="images/download_01_pt_casino.png" alt=""/>
+                        </div>
+                        <div class="download-img">
+                          <div class="download-icon-wrapper"><img class="download-icon" src="images/download_android.svg" alt="download_android"/><span>Slots</span></div><img class="download-qrcode" src="images/download_01_pt_slots.png" alt=""/>
+                        </div>
+                      </div>
+                      <ul class="download-url-list">
+                        <li>
+                          <h5>Live Casino:</h5><a href="http://m.ld176988.com/live/download.html" target="_blank">http://m.ld176988.com/live/download.html</a>
+                        </li>
+                        <li>
+                          <h5>Slots:</h5><a href="http://bit.ly/918kissyb" target="_blank">http://bit.ly/918kissyb</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <!-- ag-->
+                    <li class="swiper-slide"><img class="download-logo" src="images/download_02_ag.webp" alt=""/>
+                      <div class="download-text">
+                        <!-- 未登入 -->
+                        <!-- <p>
+                          <span class="text-gray">Login ID:</span>
+                          <a class="text-link" href="javascript:void(0)" data-toggle="modal" data-target="#registeredModal" data-dismiss="modal">Register</a>
+                          <span class="text-gray">or</span><a class="text-link" href="javascript:void(0)" data-toggle="modal" data-target="#loginModal" data-dismiss="modal">Login</a>
+                        </p>
+                        -->
+                        <p><span class="download-text-title">Login ID:</span><span class="download-text-yellow">#</span></p>
+                        <p><span class="download-text-title">Password:</span><span class="download-text-white">Same as site login</span></p>
+                      </div>
+                      <div class="download-img">
+                        <div class="download-icon-wrapper"><img class="download-icon" src="images/download_android.svg" alt="download_android"/><span>Live Casino</span></div><img class="download-qrcode" src="images/download_02_ag_casino.png" alt=""/>
+                      </div>
+                      <ul class="download-url-list">
+                        <li>
+                          <h5>Live Casino:</h5><a class="download-url" href=" https://www.agmbet.com" target="_blank">https://www.agmbet.com</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <!-- dg -->
+                    <li class="swiper-slide"><img class="download-logo" src="images/download_03_dg.webp" alt=""/>
+                      <div class="download-text">
+                        <p><span class="text-gray">Login ID:</span><a class="text-link" href="javascript:void(0)" data-toggle="modal" data-target="#registeredModal" data-dismiss="modal">Register</a><span class="text-gray">or</span><a class="text-link" href="javascript:void(0)" data-toggle="modal" data-target="#loginModal" data-dismiss="modal">Login</a></p>
+                        <!-- 未登入 -->
+                        <!-- <p>
+                          <span class="text-gray">Login ID:</span>
+                          <a class="text-link" href="javascript:void(0)" data-toggle="modal" data-target="#registeredModal" data-dismiss="modal">Register</a>
+                          <span class="text-gray">or</span><a class="text-link" href="javascript:void(0)" data-toggle="modal" data-target="#loginModal" data-dismiss="modal">Login</a>
+                        </p>
+                        -->
+                      </div>
+                      <div class="download-img">
+                        <div class="download-icon-wrapper"><img class="download-icon" src="images/download_android.svg" alt="download_android"/><img class="download-icon" src="images/download_ios.svg" alt="ios"/><span>Live Casino</span></div><img class="download-qrcode" src="images/download_03_dg_casino.png" alt=""/>
+                      </div>
+                      <ul class="download-url-list">
+                        <li>
+                          <h5>Live Casino:</h5><a class="download-url" href="https://f.dg99.info/download/cn.html" target="_blank">https://f.dg99.info/download/cn.html</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <!-- gpi -->
+                    <li class="swiper-slide"><img class="download-logo" src="images/download_04_gpi.webp" alt=""/>
+                      <div class="download-text">
+                        <!-- 未登入 -->
+                        <!-- <p>
+                          <span class="text-gray">Login ID:</span>
+                          <a class="text-link" href="javascript:void(0)" data-toggle="modal" data-target="#registeredModal" data-dismiss="modal">Register</a>
+                          <span class="text-gray">or</span><a class="text-link" href="javascript:void(0)" data-toggle="modal" data-target="#loginModal" data-dismiss="modal">Login</a>
+                        </p>
+                        -->
+                        <p> <span class="download-text-title">Login ID:</span><span class="download-text-yellow">#</span></p>
+                        <p><span class="download-text-title">Password:</span><span class="download-text-white">Same as site login</span></p>
+                      </div>
+                      <div class="download-img">
+                        <div class="download-icon-wrapper"><img class="download-icon" src="images/download_android.svg" alt="download_android"/><span>Live Casino</span></div><img class="download-qrcode" src="images/download_04_gpi_casino.png" alt=""/>
+                      </div>
+                      <ul class="download-url-list">
+                        <li>
+                          <h5>Live Casino:</h5><a class="download-url" href="https://cloudcontent.b2ucontent.com/GameDownloadClient/GMPL/app-new1b-release-2.3.20.apk" target="_blank">https://cloudcontent.b2ucontent.com/GameDownloadClient/GMPL/app-new1b-release-2.3.20.apk</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <!-- joker -->
+                    <li class="swiper-slide"><img class="download-logo" src="images/download_05_joker.webp" alt=""/>
+                      <div class="download-text">
+                        <!-- 未登入 -->
+                        <!-- <p>
+                          <span class="text-gray">Login ID:</span>
+                          <a class="text-link" href="javascript:void(0)" data-toggle="modal" data-target="#registeredModal" data-dismiss="modal">Register</a>
+                          <span class="text-gray">or</span><a class="text-link" href="javascript:void(0)" data-toggle="modal" data-target="#loginModal" data-dismiss="modal">Login</a>
+                        </p>
+                        -->
+                        <p><span class="download-text-title">Login ID:</span><span class="download-text-yellow">#</span></p>
+                        <p><span class="download-text-title">Password:</span><span class="download-text-white">Same as site login</span></p>
+                      </div>
+                      <div class="download-img">
+                        <div class="download-icon-wrapper"><img class="download-icon" src="images/download_android.svg" alt="download_android"/><img class="download-icon" src="images/download_ios.svg" alt="ios"/><span>Slots</span></div><img class="download-qrcode" src="images/download_05_joker_slots.png" alt=""/>
+                      </div>
+                      <ul class="download-url-list">
+                        <li>
+                          <h5>Slots:</h5><a class="download-url" href="https://www.joker018.net/mobile" target="_blank">https://www.joker018.net/mobile</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <!-- 918kiss -->
+                    <li class="swiper-slide"><img class="download-logo" src="images/download_06_918kiss.webp" alt=""/>
+                      <div class="download-text">
+                        <!-- 未登入 -->
+                        <!-- <p>
+                          <span class="text-gray">Login ID:</span>
+                          <a class="text-link" href="javascript:void(0)" data-toggle="modal" data-target="#registeredModal" data-dismiss="modal">Register</a>
+                          <span class="text-gray">or</span><a class="text-link" href="javascript:void(0)" data-toggle="modal" data-target="#loginModal" data-dismiss="modal">Login</a>
+                        </p>
+                        -->
+                        <p> <span class="download-text-title">Login ID:</span><span class="download-text-yellow">#</span></p>
+                        <p><span class="download-text-title">Password:</span><span class="download-text-white">Same as site login</span></p>
+                      </div>
+                      <div class="download-img">
+                        <div class="download-icon-wrapper"><img class="download-icon" src="images/download_android.svg" alt="download_android"/><img class="download-icon" src="images/download_ios.svg" alt="ios"/><span>Slots</span></div><img class="download-qrcode" src="images/download_06_918kiss_slots.png" alt=""/>
+                      </div>
+                      <ul class="download-url-list">
+                        <li>
+                          <h5>Slots:</h5><a class="download-url" href="http://bit.ly/918kissyb" target="_blank">http://bit.ly/918kissyb</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <div class="button-prev"></div>
+                  <div class="button-next"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- mobile download modal end -->
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/jquery.marquee.min.js"></script>
+    <script src="js/moment.js"></script>
+    <script src="js/pagination.min.js"></script>
+    <script type="text/javascript" src="js/all.js"></script>
+  </body>
+</html>

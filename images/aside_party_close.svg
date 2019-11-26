@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>Group 137</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="56.5673828%" y1="100%" x2="56.5673828%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#FEAA06" offset="0%"></stop>
+            <stop stop-color="#FDD609" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-137">
+            <circle id="Oval" fill-opacity="0.6" fill="#000000" cx="18" cy="18" r="18"></circle>
+            <path d="M18,0 C8.0595,0 0,8.0595 0,18 C0,27.9405 8.0595,36 18,36 C27.9405,36 36,27.9405 36,18 C36,8.0595 27.9405,0 18,0 Z M26.90325,23.72175 L23.72175,26.90325 L18,21.1815 L12.27825,26.90325 L9.09675,23.72175 L14.8185,18 L9.09675,12.27825 L12.27825,9.09675 L18,14.8185 L23.72175,9.09675 L26.90325,12.27825 L21.1815,18 L26.90325,23.72175 Z" id="Shape" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>
