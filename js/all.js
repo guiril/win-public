@@ -13,24 +13,42 @@
     var item = getAllEl(el);
     var windowHeight = document.documentElement.clientHeight;
     var windowPos = window.pageYOffset;
-    item.forEach(function (el) {
-      var thisPos = el.offsetTop;
+
+    for (var i = 0; i < item.length; i++) {
+      var thisPos = item[i].offsetTop;
 
       if (thisPos >= windowPos && thisPos <= windowPos + windowHeight) {
-        el.style.visibility = 'visible';
-        el.classList.add(className);
+        item[i].style.visibility = 'visible';
+        item[i].classList.add(className);
       }
-    });
+    } // item.forEach((el) => {
+    //   const thisPos = el.offsetTop
+    //   if (thisPos >= windowPos && thisPos <= windowPos + windowHeight) {
+    //     el.style.visibility = 'visible'
+    //     el.classList.add(className)
+    //   }
+    // })
+
+
     window.addEventListener('scroll', function () {
       var scrollY = window.scrollY;
-      item.forEach(function (el) {
-        var thisPos = el.offsetTop;
 
-        if (thisPos >= scrollY && thisPos <= scrollY + windowHeight) {
-          el.style.visibility = 'visible';
-          el.classList.add(className);
+      for (var _i = 0; _i < item.length; _i++) {
+        var _thisPos = item[_i].offsetTop;
+
+        if (_thisPos >= scrollY && _thisPos <= scrollY + windowHeight) {
+          item[_i].style.visibility = 'visible';
+
+          item[_i].classList.add(className);
         }
-      });
+      } // item.forEach((el) => {
+      //   const thisPos = el.offsetTop
+      //   if (thisPos >= scrollY && thisPos <= scrollY + windowHeight) {
+      //     el.style.visibility = 'visible'
+      //     el.classList.add(className)
+      //   }
+      // })
+
     }, false);
   };
 
@@ -392,18 +410,6 @@
           startPageNumber = 1;
           endPageNumber = 5;
 
-          for (var _i = startPageNumber; _i <= endPageNumber; _i++) {
-            if (_i === page) {
-              pageString += "<li><a class=\"page-item active\" href=\"#\" data-page=\"".concat(_i, "\">").concat(_i, "</a></li>");
-            } else {
-              pageString += "<li><a class=\"page-item\" href=\"#\" data-page=\"".concat(_i, "\">").concat(_i, "</a></li>");
-            }
-          }
-        } else if (page >= totalPage - 2 && page <= totalPage) {
-          // 目前點擊的頁碼是倒數 3 頁
-          startPageNumber = totalPage - 4;
-          endPageNumber = totalPage;
-
           for (var _i2 = startPageNumber; _i2 <= endPageNumber; _i2++) {
             if (_i2 === page) {
               pageString += "<li><a class=\"page-item active\" href=\"#\" data-page=\"".concat(_i2, "\">").concat(_i2, "</a></li>");
@@ -411,15 +417,27 @@
               pageString += "<li><a class=\"page-item\" href=\"#\" data-page=\"".concat(_i2, "\">").concat(_i2, "</a></li>");
             }
           }
-        } else {
-          startPageNumber = page - 2;
-          endPageNumber = page + 2;
+        } else if (page >= totalPage - 2 && page <= totalPage) {
+          // 目前點擊的頁碼是倒數 3 頁
+          startPageNumber = totalPage - 4;
+          endPageNumber = totalPage;
 
           for (var _i3 = startPageNumber; _i3 <= endPageNumber; _i3++) {
             if (_i3 === page) {
               pageString += "<li><a class=\"page-item active\" href=\"#\" data-page=\"".concat(_i3, "\">").concat(_i3, "</a></li>");
             } else {
               pageString += "<li><a class=\"page-item\" href=\"#\" data-page=\"".concat(_i3, "\">").concat(_i3, "</a></li>");
+            }
+          }
+        } else {
+          startPageNumber = page - 2;
+          endPageNumber = page + 2;
+
+          for (var _i4 = startPageNumber; _i4 <= endPageNumber; _i4++) {
+            if (_i4 === page) {
+              pageString += "<li><a class=\"page-item active\" href=\"#\" data-page=\"".concat(_i4, "\">").concat(_i4, "</a></li>");
+            } else {
+              pageString += "<li><a class=\"page-item\" href=\"#\" data-page=\"".concat(_i4, "\">").concat(_i4, "</a></li>");
             }
           }
         }
